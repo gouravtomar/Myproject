@@ -6,9 +6,9 @@ return (
 
 
 <div className="space-x-3">
-<a className="inline-block px-4 py-2 bg-indigo-600 text-white rounded" href="/fruits">Fruits</a>
-<a className="inline-block px-4 py-2 bg-emerald-600 text-white rounded" href="/vegetables">Vegetables</a>
-<a className="inline-block px-4 py-2 bg-red-600 text-white rounded" href="/meat">Meat</a>
+<a href="/fruits">Fruits</a>
+<a href="/vegetables">Vegetables</a>
+<a href="/meat">Meat</a>
 </div>
 
 

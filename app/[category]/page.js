@@ -1,22 +1,30 @@
-import { items } from '../data/items'
-import ClientFilter from '../../components/ClientFilter'
-
+import { items } from "../data/items";
 
 export default function CategoryPage({ params }) {
-const { category } = params
-const serverFiltered = items.filter(i => i.category === category)
+  const category = params.category?.toLowerCase();
 
+  // Debug (optional)
+  console.log("Category from URL:", category);
 
-return (
-<div>
-<h2 className="text-2xl font-semibold capitalize">Category: {category}</h2>
+  const filtered = items.filter(
+    (item) => item.category.toLowerCase() === category
+  );
 
+  return (
+    <div className="p-6">
+      <h1 className="text-2xl font-bold">Category: {category}</h1>
 
-{serverFiltered.length === 0 ? (
-<p className="mt-4 text-slate-600">No items in this category.</p>
-) : (
-<ClientFilter initialItems={serverFiltered} />
-)}
-</div>
-)
+      {filtered.length === 0 ? (
+        <p>No items in this category.</p>
+      ) : (
+        <ul className="mt-4 space-y-2">
+          {filtered.map((item) => (
+            <li key={item.id} className="p-2 border rounded">
+              {item.name}
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 }
