@@ -1,5 +1,5 @@
 import { items } from '../data/items'
-import ClientFilter from '@/components/ClientFilter'
+import ClientFilter from '../../components/ClientFilter'
 
 
 export default function CategoryPage({ params }) {
