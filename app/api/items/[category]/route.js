@@ -1,6 +1,4 @@
-import { items } from "../../../../data/items";
-
-
+import { items } from "@/app/data/items";
 
 export async function GET(request, { params }) {
   const { category } = params;
