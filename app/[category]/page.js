@@ -1,5 +1,6 @@
-import { items } from '../data/items'
-import ClientFilter from '../../components/ClientFilter'
+import { items } from '../../data/items';
+import ClientFilter from '../../components/ClientFilter';
+
 
 export default function CategoryPage({ params }) {
   const category = params.category?.toLowerCase();
